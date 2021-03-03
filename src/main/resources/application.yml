@@ -1,0 +1,34 @@
+server:
+  port: 6789
+
+spring:
+  application:
+    name: KLM Testerum Reports Server
+#  datasource:
+#    hikari:
+#      connectionTimeout: 20000
+#      maximumPoolSize: 5
+#    url: jdbc:sqlserver://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306};databaseName=${DATABASE_SCHEMA:pets}
+#    username: ${DATABASE_USER:root}
+#    password: ${DATABASE_PASSWORD:root}
+#  jpa:
+#    database-platform: org.hibernate.dialect.SQLServerDialect
+#    open-in-view: false
+#    show-sql: true
+#    hibernate:
+#      ddl-auto: none
+#  flyway:
+#    sql-migration-prefix: V
+#    repeatable-sql-migration-prefix: R
+#    sql-migration-separator: __
+#    sql-migration-suffixes: .sql
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+logging:
+  level:
+    org.springframework: ERROR
+    org.springframework.security: DEBUG
+    klm.reports_server: DEBUG
+
