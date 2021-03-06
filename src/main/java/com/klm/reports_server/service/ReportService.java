@@ -24,6 +24,7 @@ public class ReportService {
 
         for (KlmTestReport klmTestReport : executionReport) {
             TestResultEntity testResultEntity = new TestResultEntity();
+            testResultEntity.suiteResultEntity = suiteResultEntity;
             testResultEntity.testName = klmTestReport.testName;
             testResultEntity.testPath = klmTestReport.testPath;
             testResultEntity.testStatus = klmTestReport.testStatus.name();
