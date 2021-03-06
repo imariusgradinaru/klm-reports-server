@@ -4,24 +4,24 @@ server:
 spring:
   application:
     name: KLM Testerum Reports Server
-#  datasource:
-#    hikari:
-#      connectionTimeout: 20000
-#      maximumPoolSize: 5
-#    url: jdbc:sqlserver://${DATABASE_HOST:localhost}:${DATABASE_PORT:3306};databaseName=${DATABASE_SCHEMA:pets}
-#    username: ${DATABASE_USER:root}
-#    password: ${DATABASE_PASSWORD:root}
-#  jpa:
-#    database-platform: org.hibernate.dialect.SQLServerDialect
-#    open-in-view: false
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: none
-#  flyway:
-#    sql-migration-prefix: V
-#    repeatable-sql-migration-prefix: R
-#    sql-migration-separator: __
-#    sql-migration-suffixes: .sql
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    url: jdbc:sqlserver://${DATABASE_HOST:localhost}:${DATABASE_PORT:1433};databaseName=${DATABASE_SCHEMA:testerum-reports}
+    username: ${DATABASE_USER:sa}
+    password: ${DATABASE_PASSWORD:super_duper_password!!123}
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  flyway:
+    sql-migration-prefix: V
+    repeatable-sql-migration-prefix: R
+    sql-migration-separator: __
+    sql-migration-suffixes: .sql
   jackson:
     serialization:
       write-dates-as-timestamps: false
